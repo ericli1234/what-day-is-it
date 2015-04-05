@@ -1,2 +1,2 @@
-# what-day-is-it
+# What Day Is It?
 Outputs the Current Day
