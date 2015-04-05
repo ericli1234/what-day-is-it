@@ -1,9 +1,17 @@
-#date {
+body {
 	font-family: 'Open Sans', serif;
+	text-align: center;
+}
+
+#date {
 	font-size: 48px;
 }
 
+#time {
+	font-size: 32px;
+}
+
 #day {
-	font-family: 'Open Sans', serif;
-	font-size: 12px;
+	font-size: 128px;
+	margin-top: 10%;
 }
