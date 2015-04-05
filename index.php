@@ -7,6 +7,8 @@
 	</head>
 	<body>
 		<?php 
+		echo '<span id="date">' . date("F j, Y, g:i A T") . '</span>'; 
+		echo '<span id="day">' . Day X . '</span>'; 
 		?> 
 	</body>
 </html>
