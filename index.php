@@ -15,8 +15,7 @@
 			echo '<h1 id="date">' . date("l\, F j Y") . '</h1>'; 
 			
 			$month = date('n');
-			//$day = date('j');
-			$day = 30;
+			$day = date('j');
 			//Initialize the queries
 			$typequery="SELECT type FROM day.2015 WHERE month='$month' AND day='$day'";
 			$eventquery="SELECT event FROM day.2015 WHERE month='$month' AND day='$day'";
