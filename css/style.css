@@ -1,14 +1,13 @@
 body {
 	font-family: 'Open Sans', serif;
 	text-align: center;
+	background-image: url("vp.png");
+	background-position: 50% 50px;
+	height: 100%;
 }
 
 #date {
 	font-size: 48px;
-}
-
-#time {
-	font-size: 32px;
 }
 
 #day {
