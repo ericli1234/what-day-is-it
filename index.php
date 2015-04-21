@@ -8,10 +8,46 @@
 	</head>
 	<body>
 		<?php
-		$date = 1;
-		echo '<h1 id="date">' . date("F j Y") . '</h1>'; 
-		echo '<h1 id="time">' . date("g:i A T") . '</h1>'; 
-		echo '<h1 id="day">' . 'Day ' . $date . '</h1>'; 
+			//Include the database configuration file
+			include 'config.php';
+			
+			// Display current date
+			echo '<h1 id="date">' . date("l\, F j Y") . '</h1>'; 
+			
+			$month = date('n');
+			//$day = date('j');
+			$day = 30;
+			//Initialize the queries
+			$typequery="SELECT type FROM day.2015 WHERE month='$month' AND day='$day'";
+			$eventquery="SELECT event FROM day.2015 WHERE month='$month' AND day='$day'";
+
+			if ($result=mysqli_query($mysqli,$typequery))
+			{
+				// Fetch the day type
+				// This is a temporary fix
+				while ($row=mysqli_fetch_row($result))
+				{
+					echo '<h1 id="day">' . $row[0] . '</h1>';
+				}
+				// Empty result
+				mysqli_free_result($result);
+				}
+
+			if ($result=mysqli_query($mysqli,$eventquery))
+			{
+				// Fetch the events
+				// Another temporary fix
+				while ($row=mysqli_fetch_row($result))
+				{
+					echo '<h2 id="event">' . $row[0] . '</h2>';
+				}
+				// Empty result
+				mysqli_free_result($result);
+			}
+			
+			// Close the connection
+			mysqli_close($mysqli);
+
 		?> 
 	</body>
 </html>
