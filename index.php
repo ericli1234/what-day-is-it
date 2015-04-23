@@ -44,6 +44,54 @@
 				mysqli_free_result($result);
 			}
 			
+			echo '<hr> <!-- Temporary Separator--> <br>';
+			////////////////////////////////////////////////////////
+			//Information on Tomorrow
+			////////////////////////////////////////////////////////
+			
+			// Display tomorrow's date
+			echo '<h1 id="date">' . "Tomorrow is " . date("l\, F j Y", time()+86400) . '</h1>'; 
+			
+			if ($result=mysqli_query($mysqli,$idquery))
+			{
+				// Fetch the day id of tomorrow
+				// Another temporary fix (This is absolutely terrible)
+				while ($row=mysqli_fetch_row($result))
+				{
+					$day_id = $row[0] + 1;
+				}
+				// Empty result
+				mysqli_free_result($result);
+			}
+			
+			// Initialize the queries for tomorrow based on the day id
+			$newtypequery="SELECT type FROM day.2015 WHERE id='$day_id'";
+			$neweventquery="SELECT event FROM day.2015 WHERE id='$day_id'";
+			
+			if ($result=mysqli_query($mysqli,$newtypequery))
+			{
+				// Fetch the day type
+				// This is a temporary fix
+				while ($row=mysqli_fetch_row($result))
+				{
+					echo '<h1 id="day">' . $row[0] . '</h1>';
+				}
+				// Empty result
+				mysqli_free_result($result);
+				}
+
+			if ($result=mysqli_query($mysqli,$neweventquery))
+			{
+				// Fetch the events
+				// Another temporary fix
+				while ($row=mysqli_fetch_row($result))
+				{
+					echo '<h2 id="event">' . $row[0] . '</h2>';
+				}
+				// Empty result
+				mysqli_free_result($result);
+			}
+			
 			// Close the connection
 			mysqli_close($mysqli);
 
