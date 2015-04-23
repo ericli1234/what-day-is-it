@@ -12,13 +12,14 @@
 			include 'config.php';
 			
 			// Display current date
-			echo '<h1 id="date">' . date("l\, F j Y") . '</h1>'; 
+			echo '<h1 id="date">' . "Today is " . date("l\, F j Y") . '</h1>'; 
 			
 			$month = date('n');
 			$day = date('j');
 			//Initialize the queries
 			$typequery="SELECT type FROM day.2015 WHERE month='$month' AND day='$day'";
 			$eventquery="SELECT event FROM day.2015 WHERE month='$month' AND day='$day'";
+			$idquery="SELECT id FROM day.2015 WHERE month='$month' AND day='$day'";
 
 			if ($result=mysqli_query($mysqli,$typequery))
 			{
