@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://projectlemon.tk/ -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>What Day Is It?</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open%20Sans">
+		<style type="text/css"></style>
+	</head>
+	<body>
+		<table>
+		<tr>
+		<td><h1 id="date">Today is Sunday, June 14 2015</h1></td>
+		<td><h1 id="date">Tomorrow is Monday, June 15 2015</h1></td>
+		</tr>
+		
+		<tr>
+		<td><h1 id="day">No School</h1></td>
+		<td><h1 id="day">Day 2</h1></td>
+		</tr>
+		
+		<tr>
+		<td><h2 id="event">Sunday</h2></td>
+		<td><h2 id="event"></h2></td>
+		</tr>
+		</table>
+	</body>
+</html>
