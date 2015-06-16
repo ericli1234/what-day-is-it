@@ -1,0 +1,35 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Open Sans', serif;
+	background-image: url("1955042.jpg");
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#date {
+	font-size: 48px;
+}
+
+#day {
+	font-size: 128px;
+	margin-top: 10%;
+}
+
+#event {
+	font-size: 44px;
+}
+
+table {
+	width: 100%;
+	table-layout: auto;
+	column-width: 50%;
+}
+
+td{ 
+	text-align: center; 
+}
