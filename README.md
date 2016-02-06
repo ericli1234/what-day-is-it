@@ -1,12 +1,9 @@
 # What Day Is It?
-Outputs the Current Day
-
-Release 1.0 - Functioning Back-End, CSS Partially Complete
+Outputs today and tomorrow's date, day type, and events from a MySQL database.
+Supports a hit counter.
 
 # To Do:
--Seperate the different days into DIV blocks
-- Clean Up
-- Interactive Calendar ???
-- Upload MySQL database script
+* Interactive Calendar???
+* MySQL database script
 
 Feel free to fork or submit a pull request.
