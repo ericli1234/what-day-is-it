@@ -6,26 +6,31 @@ html
 	background-size: cover;
 	background-position: center;
 }
+
 hr
 {
     height: 1px;
     background-color: #333;
 }
+
 .date
 {
 	font-size: 48px;
 }
+
 .type
 {
     font-weight: bold;
 	font-size: 128px;
     margin: 0;
 }
+
 .event
 {
     font-weight: bold;
 	font-size: 44px;
 }
+
 .notice
 {
     font-weight: bold;

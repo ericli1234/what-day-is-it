@@ -1,6 +1,6 @@
 <?php
     ############################################################################
-    # connect to database
+    # connect to mysql server
     ############################################################################
     include 'config.php';
     
@@ -114,7 +114,7 @@
         <link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon"/>
     </head>
     <body>
-        <h1 class="notice">NOTICE: All late starts and early dismissals are canceled</h1>
+        <h1 class="notice">NOTICE: All late starts and early dismissals are cancelled</h1>
         <hr>
         <div>
             <h1 class="date">Today is <?php echo $todayDate; ?></h1>
@@ -123,7 +123,7 @@
         </div>
         <hr>
         <div>
-            <h1 class="date">Today is <?php echo $tomorrowDate; ?></h1>
+            <h1 class="date">Tomorrow is <?php echo $tomorrowDate; ?></h1>
             <p class="type"><?php echo $tomorrowType; ?></p>
             <p class="event"><?php echo $tomorrowEvent; ?></p>
         </div>
