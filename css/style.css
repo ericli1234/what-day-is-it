@@ -1,8 +1,8 @@
 html
 {
 	height: 100%;
-    font-family: 'Open Sans', serif;
-	background-image: url("vp.jpg");
+    font-family: 'Lato', sans-serif;
+	background-image: url("../media/vp.png");
 	background-size: cover;
 	background-position: center;
 }
@@ -11,6 +11,11 @@ hr
 {
     height: 1px;
     background-color: #333;
+}
+
+.center
+{
+    text-align: center;
 }
 
 .date

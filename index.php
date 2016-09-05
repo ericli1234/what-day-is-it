@@ -9,10 +9,10 @@
     ############################################################################
     $todayID = date('z') + 1;
     $tomorrowID = date('z') + 2;
-    $todayTypeQuery = "SELECT type FROM day.current WHERE id = '$todayID'";
-    $todayEventQuery = "SELECT event FROM day.current WHERE id = '$todayID'";
-    $tomorrowTypeQuery = "SELECT type FROM day.current WHERE id = '$tomorrowID'";
-    $tomorrowEventQuery = "SELECT event FROM day.current WHERE id = '$tomorrowID'";
+    $todayTypeQuery = "SELECT type FROM day.2016 WHERE id = '$todayID'";
+    $todayEventQuery = "SELECT event FROM day.2016 WHERE id = '$todayID'";
+    $tomorrowTypeQuery = "SELECT type FROM day.2016 WHERE id = '$tomorrowID'";
+    $tomorrowEventQuery = "SELECT event FROM day.2016 WHERE id = '$tomorrowID'";
     $counterQuery = "SELECT hits FROM day.counter WHERE id = 0";
     $counterUpdateQuery = "UPDATE day.counter SET hits = hits + 1 WHERE id = 0";
     
@@ -103,19 +103,18 @@
     ############################################################################
     mysqli_close($mysqli);
 ?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
         <title>What Day Is It?</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open%20Sans"/>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css"/>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
         <link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon"/>
     </head>
-    <body>
-        <h1 class="notice">NOTICE: All late starts and early dismissals are cancelled</h1>
-        <hr>
+    <body class="center">
         <div>
             <h1 class="date">Today is <?php echo $todayDate; ?></h1>
             <p class="type"><?php echo $todayType; ?></p>
